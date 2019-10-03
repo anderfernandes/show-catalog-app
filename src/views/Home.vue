@@ -1,5 +1,6 @@
 <template>
   <div class="ui container">
+    <br>
     <div class="ui form">
       <div class="four fields">
         <div class="field">
@@ -36,6 +37,12 @@
         </div>
       </div>
     </div>
+    <br>
+    <a href="https://astral.anderfernandes.com" target="_blank" class="ui black tiny image label" style="float:right">
+      <img src="https://astral.anderfernandes.com/assets/astral-logo-light.png" alt="Astral"> 
+      Powered by Astral
+    </a>
+    <br><br>
   </div>
 </template>
 

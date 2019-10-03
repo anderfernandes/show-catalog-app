@@ -1,7 +1,9 @@
 <template>
-  <transition name="fade" mode="out-in">
-    <router-view />
-  </transition>
+  <div id="show-catalog" style="min-height:100vh">
+    <transition name="fade" mode="out-in">
+      <router-view />
+    </transition>
+  </div>
 </template>
 
 <style>
