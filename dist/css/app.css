@@ -1,1 +1,1 @@
-.fade-enter-active,.fade-leave-active{-webkit-transition:opacity .5s;transition:opacity .5s}.fade-enter,.fade-leave-to{opacity:0}
+.fade-enter-active,.fade-leave-active{-webkit-transition:opacity .5s;transition:opacity .5s}.fade-enter,.fade-leave-to{opacity:0}.ui.embed>.placeholder{width:inherit!important;-webkit-transform:translate(-50%,-50%)!important;transform:translate(-50%,-50%)!important;left:50%;top:50%}.ui.embed{background:#000!important}
