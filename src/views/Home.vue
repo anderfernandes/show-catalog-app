@@ -1,6 +1,19 @@
 <template>
-  <div class="ui container">
+  <div class="ui container" style="min-height:100%">
     <br />
+    <!--- Announcements --->
+    <div class="ui basic segment" v-show="announcements.length > 0">
+      <div :class="`ui ${ announcement.type } icon message`" v-for="announcement in announcements" :key="announcement.id">
+        <i class="info circle icon"></i>
+        <div class="content">
+          <div class="header">
+            {{ announcement.title }}
+          </div>
+          <p v-html="announcement.content"></p>
+        </div>
+      </div>
+    </div>
+    <!--- Show Filter Form --->
     <div class="ui form">
       <div class="four fields">
         <div class="field">
@@ -21,8 +34,8 @@
     </div>
     <p class="ui blue message" style="text-align:center">
       <strong>{{ filteredShows.length }}</strong>
-      <span v-if="filteredShows.length == 1">show</span>
-      <span v-else>shows</span>
+      <span v-if="filteredShows.length == 1"> show</span>
+      <span v-else> shows</span>
       found.
     </p>
     <div class="ui active inverted dimmer" v-if="loading">
@@ -83,7 +96,10 @@ export default {
   },
   computed: {
     shows() {
-      return this.$store.state.shows;
+      return this.$store.state.shows
+    },
+    announcements() {
+      return this.$store.state.announcements
     },
     filteredShows() {
       let filteredShows = this.shows;

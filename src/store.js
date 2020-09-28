@@ -8,6 +8,7 @@ export default new Vuex.Store({
   state: {
     loading: true,
     shows: [],
+    announcements: [],
     name: '',
     type: '',
   },
@@ -23,6 +24,9 @@ export default new Vuex.Store({
     },
     SET_TYPE(state, type) {
       Object.assign(state, { type })
+    },
+    SET_ANNOUNCEMENTS(state, announcements) {
+      Object.assign(state, { announcements })
     }
   },
   actions: {
@@ -30,9 +34,9 @@ export default new Vuex.Store({
       try {
         const response = await axios.get(payload)
         // Filtering unwanted shows: Classic Movies and Inactive
-        const filteredShows = response.data
-                                .filter(s => s.type != "Classic Movies")
-                                .filter(s => s.active != "0")
+        const filteredShows = response.data.data
+          .filter(s => s.type != "Classic Movies")
+          .filter(s => s.active != "0")
         commit('SET_SHOWS', filteredShows)
       } catch(error) {
         alert(`Error in fetchShows: ${error.message}`)
