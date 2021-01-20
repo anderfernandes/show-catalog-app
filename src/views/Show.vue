@@ -25,7 +25,7 @@
         <i class="film icon"></i>
         Trailer
       </div>
-      <sui-embed :placeholder="show.cover" source="youtube" :id="show.trailer_url.split('=')[1]" />
+      <sui-embed :placeholder="show.cover" :source="show.trailer_provider" :id="show.trailer_id" />
     </div>
     <br />
     <a
