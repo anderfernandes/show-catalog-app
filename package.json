@@ -10,7 +10,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "core-js": "^2.6.10",
-    "marked": "^0.7.0",
+    "marked": "^4.0.10",
     "semantic-ui-vue": "^0.8.1",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
